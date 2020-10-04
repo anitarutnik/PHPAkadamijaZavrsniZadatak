@@ -1,0 +1,19 @@
+<?php include 'layout/header.phtml' ?>
+
+
+<div class="row mt-4">
+    <?php foreach ($estates as $estate) : ?>
+        <div class="column col-lg-4">
+            <div class="card">
+                <img class="card-img-top" src="../Images/home.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $estate->getName() ?></h5>
+                    <p class="card-text"><?= $estate->getDescription() ?></p>
+                    <p class="card-text"><?= $estate->getId() ?></p>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+<?php include 'layout/footer.phtml' ?>

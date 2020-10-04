@@ -1,0 +1,25 @@
+<?php include './layout/header.phtml' ?>
+
+<header>
+    <p class="top-liner">Contact us with a confidence</p>
+    <h1>MyHome - Real estate agency</h1>
+    <a href="contact.html" class="main-button">Send us a message</a>
+</header>
+
+<div class="row mt-4">
+    <?php foreach ($categories as $category) : ?>
+        <div class="column col-lg-4">
+            <div class="card">
+                <img class="card-img-top" src="<?= $category->getPhotoUri() ?>" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $category->getName() ?></h5>
+                    <p class="card-text"><?= $category->getDescription() ?></p>
+                    <a href="/estates/test?id=<?= $category->getId() ?>" class="btn btn-primary">Category Page</a>
+                </div>
+            </div>
+        </div>
+
+    <?php endforeach; ?>
+</div>
+
+<?php include 'layout/footer.phtml' ?>
